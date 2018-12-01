@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<link rel="stylesheet" href="css/common.css" type='text/css'>
+		<link rel="stylesheet" href="css/product_detail_body.css" type="text/css">
+		<link rel="stylesheet" href="css/iconcss/iconfont.css">
+	</head>
+	<body onload='initialize()'>
+		<header>
+			<!-- 头部登录区 -->
+			<div id='title'>
+				<div class='content'>
+					<span>您好，欢迎来到阿七果园子！</span>
+					<ul class='right mycenter'>
+						<li><a href='user_login.html' title='登录账户'>[登录]</a>&nbsp;</li>
+						<li><a href='user_register.html' title='注册新用户'>[注册有惊喜]</a></li>
+						<li><a href='' title='个人中心'>我的果园</a></li>
+						<li><a href='' title='移动端'>手机果园</a></li>
+						<li>400-720-0770</li>
+					</ul>
+				</div>
+			</div>
+			<div id='searchbardiv'>
+				<div class='content'>
+					<!-- logo图片 -->
+					<h3 class='logo'><a href="index.html" title='阿七果园'></a></h3>
+					<h4 class='logo'><a href="index.html" title='阿七果园'></a></h4>
+					<!-- 配送 -->
+					<div id="delivery">
+						
+					</div>
+					<!-- 搜索框及搜索热点 -->
+					<div id="searchbar">
+						<span>搜索热点:</span>
+						<ul id='hot'>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<div id="searchBtn">搜索</div>
+						<input type="text" id='search'>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</header>
+		
+		<nav>
+			<div class='content'>
+				<ul class="nav">
+					<li id='allproducts' ><a href="">全部商品</a>
+						<ul class='subnav'>
+							<li><a href="">所有鲜果</a></li>
+							<li><a href="">进口鲜果</a></li>
+							<li><a href="">国产鲜果</a></li>
+							<li><a href="">休闲食品</a></li>
+							<li><a href="">礼盒花篮</a></li>
+							<li><a href="">消费卡券</a></li>
+							<li><a href="">宝贝水果</a></li>
+							<li><a href="">孕妇水果</a></li>
+							<li><a href="">老人水果</a></li>
+							<li><a href="">其他</a></li>
+						</ul>
+					</li>
+					<li><a href="">首页</a></li>
+					<li><a href="">进口鲜果</a></li>
+					<li><a href="">国产鲜果</a></li>
+					<li><a href="">在线充值</a></li>
+					<li><a href="">团购配送</a></li>
+					<li><a href="">其他</a></li>
+				</ul>
+				<div id='shopcar'><a href=""><i></i> 购物车</a></div>
+			</div>
+			<div class="clearfix"></div>
+		</nav>
+		<section>
+			<div class="content productdetail">
+				<div class="asidelink">
+					<div class="head">猜你喜欢</div>
+					<div class="linkcontainer">
+						<ul class="linklist">
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+				<div class="body">
+					<p>
+						<span  class="productname">name</span><i class="iconfont icon-qrcode-1-copy"></i>
+					</p>
+					<div class="buyarea">
+						<div class="picholder"></div>
+						<div class="price">
+							<h5 class="ftitle"></h5>
+							<p><span class="pricetitle">原价 :</span><del class='marketprice'>28.00</del></p>
+							<p><span class="pricetitle">促销价 :</span><span class="ourprice">￥19.80</span></p>
+							<p><span class="pricetitle">包装规格 :</span><span class="packweight"></span></p>
+							<p><span class="pricetitle">赠送积分</span> <span class="bonuspoints">0</span></p>
+							<p><span class="pricetitle">:</span><span class=""></span></p>
+							<div class="buycount"><span class="pricetitle">购买数量 :</span>
+								<div class="countcontrol">
+									<input class="buycounttext" type="text" value=1 >
+									<div>
+										<a href="javascript:buycountadd(1)" class="add">
+											<div class="addicon"></div>
+										</a>
+										<a href="javascript:buycountadd(-1)" class="reduce">
+											<div class="reduceicon"></div>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="buybtn">
+								<div class="addtocar">加入购物车</div>
+								<div class="buynow">立即购买</div>
+							</div>
+							<p class="service"></p>
+						</div>
+					</div>
+					<p class="collection">
+						<span> <i class="iconfont icon-shoucang"></i>收藏</span><b>|</b>
+						<span> <i class="iconfont icon-fenxiang"></i>分享</span>
+					</p>
+					<div class="changeP">
+						<div class="prevproduct">上一个</div>
+						<div class="nextproduct">下一个</div>
+					</div>
+					<div class="productspec">
+						<a class="spec active" onclick="activea(this)">产品详情</a>
+						<a class="comment" onclick="activea(this)">产品评论</a>
+						<a class="dealcount" onclick="activea(this )">销售记录</a>
+						<div class="specdiv">
+							<div id="spec" class="actived">
+								<table>
+									<tr>
+										<td>水果名称:</td><td class="specname value"></td>
+										<td>水果产地:</td><td class="oCountry value"></td>
+									</tr>
+									<tr>
+										<td>是否进口:</td><td class="isImport value"></td>
+										<td>上架时间:</td><td class="shelfTime value"></td>
+									</tr>
+									<tr><td>储存方法:</td><td class="shelfTime value"></td>
+										<td>包装规格:</td><td class="packWeight value"></td>
+									</tr>
+									<tr>
+										<td>产品分类:</td><td class="specname value"></td>
+										<td>产品编号:</td><td class="specname value"></td>
+									</tr>
+										<td>特性:</td><td class="charactor value"></td>
+										<td>其他:</td><td class="other value"></td>
+									</tr>
+								</table>
+
+							</div>
+							<div id="comment">22</div>
+							<div id="dealcount">33</div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			
+		</section>
+
+		<footer>
+			<div class="content">
+				<div class="ltext">
+					<div>
+						<h3>新手指南</h3>
+						<ul>
+							<li>购物流程</li>
+							<li>用户注册</li>
+							<li>会员积分</li>
+							<li>联系客服</li>
+						</ul>
+					</div>
+					<div>
+						<h3>付款方式</h3>
+						<ul>
+							<li>货到付款</li>
+							<li>在线支付</li>
+							<li>在线充值</li>
+						</ul>
+					</div>
+					<div>
+						<h3>配送服务</h3>
+						<ul>
+							<li>配送运费</li>
+							<li>配送范围</li>
+							<li>配送时间</li>
+							<li>配送须知</li>
+						</ul>
+					</div>
+					<div>
+						<h3>售后服务</h3>
+						<ul>
+							<li>关于商品的退换</li>
+							<li>关于退换的处理</li>
+							<li>关于退款</li>
+							<li>投诉建议</li>
+						</ul>
+					</div>
+					<div>
+						<h3>关于我们</h3>
+						<ul>
+							<li>关于阿七果园子</li>
+							<li>联系我们</li>
+							<li>业务合作</li>
+							<li>招贤纳士</li>
+						</ul>
+					</div>
+				</div>
+				<div class="rimg">
+					<img src="../image/1_36.png" alt="">
+					<img src="../image/footercontact_38.png" alt="">
+					<p>客服电话:0571-83539906</p>
+					<p>地址:浙江省杭州市萧山区</p>
+				</div>
+			</div>
+		</footer>
+		<script>
+			
+			// function getlist(){
+			// 	function normallist(){
+			// 		var xhr = new XMLHttpRequest();
+			// 		xhr.onreadystatechange=function (){
+			// 			if(xhr.readyState==4 && xhr.status==200){
+			// 				//console.log(1111);
+			// 				var result=JSON.parse(xhr.responseText);
+			// 				//console.log(result);
+			// 				var listr='';
+			// 				for(var i=0;i<result.length;i++){
+			// 					listr+='<li><div class="clock"><p>限时抢购</p><img src="image/clock.png"></div><img class="npimg" src="'+result[i].spic+'"><p class="title">'+result[i].title+'</p><p class="fdesc">'+result[i].fdesc+'</p><p class="timer">'+'02小时35分26秒'+'</p><p class="price"><span class="nPrice">￥'+result[i].nUnitPrice.toFixed(2)+'</span><span class="packWeight">'+result[i].packWeight+'斤</span><span class="oPrice">原价:'+result[i].oUnitPrice+'</span></p><p class="dealCount">300人已购买</p><div class="buyBtn"><a href="#" >立即抢购</a></div></li>'
+			// 				}
+			// 				var ul=document.createElement('ul');
+			// 				ul.innerHTML=listr;
+			// 				normalp.appendChild(ul);
+			//
+			// 			}
+			// 		}
+			// 		xhr.open('get','/product/normallist',true);
+			// 		xhr.send(null);
+			// 	}
+            //
+			// 	function Onsalelist(){
+			// 		var xhr = new XMLHttpRequest();
+			// 		xhr.onreadystatechange=function (){
+			// 			if(xhr.readyState==4 && xhr.status==200){
+			// 				var result=JSON.parse(xhr.responseText);
+			// 				console.log(result);
+			// 				var listr1='';
+			// 				for(var i=0;i<result.length/2;i++){
+			// 					listr1+='<li><img src="'+result[i].spic+'"><p class="name">'+result[i].pName+'</p><p class="price"><span class="nPrice">￥'+result[i].nUnitPrice.toFixed(2)+'</span><span class="packWeight">'+result[i].packWeight+'斤</span></p><p class="oPrice">原价 : '+result[i].oUnitPrice+'</p></li>'
+			// 				}
+			// 				var ul1=document.createElement('ul');
+			// 				ul1.innerHTML=listr1;
+			// 				Onsalep.appendChild(ul1);
+			// 				var listr2=''
+			// 				for(var i=result.length/2;i<result.length;i++){
+			// 					listr2+='<li><img src="'+result[i].spic+'"><p class="name">'+result[i].pName+'</p><p class="price"><span class="nPrice">￥'+result[i].nUnitPrice.toFixed(2)+'</span><span class="packWeight">'+result[i].packWeight+'斤</span></p><p><span class="oPrice">原价:'+result[i].oUnitPrice+'</span></p></li>'
+			// 				}
+			// 				var ul2=document.createElement('ul');
+			// 				ul2.innerHTML=listr2;
+			// 				Onsalep.appendChild(ul2);
+			//
+			// 			}
+			// 		}
+			// 		xhr.open('get','/product/Onsalelist',true);
+			// 		xhr.send(null);
+			// 	}
+            //
+			// 	function giftBasketlist(){
+			// 		var xhr = new XMLHttpRequest();
+			// 		xhr.onreadystatechange=function (){
+			// 			if(xhr.readyState==4 && xhr.status==200){
+			// 				var result=xhr.responseText;
+			// 				console.log(result);
+			// 			}
+			// 		}
+			// 		xhr.open('get','/product/giftBasketlist',true);
+			// 		xhr.send(null);
+			// 	}
+			// 	normallist();
+			// 	Onsalelist();
+			// 	giftBasketlist();
+			// }
+
+			//定义选项卡切换样式函数。
+			function activea(obj){
+                var aFaEle = document.getElementsByClassName("productspec")[0];
+                var aList = aFaEle.getElementsByTagName("a");
+                for(var i=0;i<aList.length;i++){
+                    aList[i].classList.remove("active");
+                }
+                obj.classList.add("active");
+				var activeClass=obj.getAttribute("class")
+				var actdiv=document.getElementsByClassName("specdiv")[0].getElementsByTagName("div")
+				for(var j=0;j<actdiv.length;j++){
+                    actdiv[j].classList.remove("actived");
+                    if(activeClass.indexOf(actdiv[j].getAttribute("id"))>-1){
+				        actdiv[j].classList.add("actived");
+					}
+				}
+			}
+
+			function getdetail(){
+                var urlParams = new URLSearchParams(location.search);
+                var fid=urlParams.get('fid');
+                var xhr= new XMLHttpRequest();
+                if(fid){
+                    xhr.onreadystatechange=function(){
+                        if(xhr.readyState==4& xhr.status==200){
+                            var result=JSON.parse(xhr.responseText);
+                            console.log(result);
+                        }
+                    }
+                    xhr.open('get','/product/product_detail?fId='+fid,true)
+                    xhr.send(null);
+                }
+			}
+			var reduceBtn = document.getElementsByClassName("reduce")[0];
+
+
+			function buycountadd(num){
+			    var buycountvalue = document.getElementsByClassName("buycounttext")[0];
+			    buycountvalue.value = Number(buycountvalue.value)+num;
+			    if(buycountvalue.value<=1){
+					reduceBtn.classList.add("disable");
+				}else{
+                    reduceBtn.classList.remove("disable");
+				}
+			}
+
+			function initialize(){
+				getdetail();
+				reduceBtn.classList.add("disable");
+			}
+		</script>
+	</body>
+</html>

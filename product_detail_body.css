@@ -1,0 +1,257 @@
+/*
+* @Author: dragoonqp
+* @Date:   2018-11-25 10:04:54
+* @Last Modified by:   dragoonqp
+* @Last Modified time: 2018-11-25 16:59:27
+*/
+*{
+	padding: 0;
+	margin:0;
+}
+.productdetail{
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+	z-index: 1;
+}
+section{
+	padding-top: 20px;
+}
+
+/*侧边栏*/
+.asidelink{
+	width:212px;
+	height:1000px;
+	background:#f6f6f6;
+
+}
+.asidelink .head{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	height: 47px;
+	box-sizing: border-box;
+	padding-left: 10px;
+	background:#4ab344;
+	font:18px 微软雅黑;
+	color: #ffffff;
+}
+.asidelink .linkcontainer{
+	width:100%;
+	padding:15px 10px;
+	box-sizing: border-box;
+}
+.linklist li{
+	width:190px;
+	height:160px;
+	margin:10px auto;
+	background: red;
+}
+
+
+
+/*内容区*/
+.body{
+	box-sizing: border-box;
+	padding-left:18px;
+	width: 78%;
+}
+.body>p:first-child{
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+	height: 47px;
+	font:20px 微软雅黑;
+}
+.body>p:first-child i,.body>p:first-child span{
+	font:20px 微软雅黑;
+}
+
+.body .buyarea{
+	display: flex;
+	justify-content: flex-start;
+}
+.buyarea .picholder{
+	box-sizing: border-box;
+	border:1px solid gray;
+	width: 353px;
+	height:353px;
+}
+.buyarea .price{
+	margin-left: 10px;
+}
+.buyarea .price p{
+	height:30px;
+}
+.buyarea .buycount{
+	display: flex;
+	align-items: center;
+	height:50px;
+}
+.pricetitle{
+	display: inline-block;
+	width:90px;
+	text-align: right;
+}
+.countcontrol>div{
+	width: 30px;
+	height: 30px;
+	float:left;
+	margin-left:5px;
+	display: flex;
+	flex-direction: column;
+	justify-content:space-between;
+}
+.countcontrol input{
+	float:left;
+	width:30px;
+	height:30px;
+	text-align: center;
+	box-sizing: border-box;
+}
+.add,.reduce{
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width:12px;
+	height:12px;
+	border: 1px solid gray;
+	background: #eeeeee;
+}
+.disable .reduceicon{
+	border-top:5px solid gray;
+	border-right:5px solid transparent;
+	border-bottom:5px solid transparent;
+	border-left:5px solid transparent;
+}
+.addicon{
+	margin-top: -4px;
+	width: 0px;
+	height: 0px;
+	border-top:5px solid transparent;
+	border-right:5px solid transparent;
+	border-bottom:5px solid black;
+	border-left:5px solid transparent;
+}
+.reduceicon{
+	margin-bottom: -4px;
+	width: 0px;
+	height: 0px;
+	border-top:5px solid black;
+	border-right:5px solid transparent;
+	border-bottom:5px solid transparent;
+	border-left:5px solid transparent;
+}
+
+
+.buybtn{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.buybtn div{
+	width:140px;
+	height: 39px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font: 20px 微软雅黑;
+	box-sizing: border-box;
+}
+.buybtn .addtocar{
+	margin-left: 20px;
+	border:1px solid #019f1d;
+	color:#019f1d;
+}
+.buybtn .buynow{
+	background:#019f1d;
+	color: white;
+	margin-left: 15px;
+}
+.collection{
+	margin:10px 0px;
+}
+.collection b{
+	margin:0 5px 0 15px;
+	font-size: 14px;
+	font-weight: normal;
+}
+.collection span{
+	font: 18px 微软雅黑；
+	color:#ffffff;
+}
+.collection span:hover{
+	color:#019f1d;
+}
+.collection span i{
+	margin: 0 5px;
+	font:18px 微软雅黑;
+}
+.changeP{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.changeP div{
+	width:60px;
+	height:20px;
+	line-height: 20px;
+	text-align: center;
+	margin:10px 10px;
+	border:1px solid black;
+}
+.productspec{
+	position: relative;
+}
+.productspec .specdiv{
+	position: relative;
+	background: red;
+}
+.productspec a{
+	display: inline-block;
+	position: relative;
+	width:117px;
+	height:41px;
+	border:1px solid gray;
+	line-height: 41px;
+	text-align: center;
+	color:#666666;
+
+
+}
+.productspec a.active{
+	border-bottom: 1px solid white;
+	position: relative;
+	height: 41px;
+	z-index: 10;
+}
+.productspec .specdiv div.actived{
+	display: block;
+}
+.productspec .specdiv div{
+	position:absolute;
+	top:-1px;
+	display: none;
+	width: 100%;
+	height:500px;
+	z-index: 1;
+	border-top: 1px solid #019f1d;
+}
+.productspec .specdiv div table{
+	width:90%;
+	margin-top:10px;
+	border: 1px solid gray;
+	border-collapse: collapse;
+	font:16px 微软雅黑;
+
+}
+.productspec .specdiv div table td{
+	border: 1px solid gray;
+	padding: 5px 0px;
+	valign:middle;
+}
+.productspec .specdiv div table td.value{
+	width:40%;
+}
