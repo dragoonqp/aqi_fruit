@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<link rel="stylesheet" href="css/common.css" type='text/css'>
+		<link rel="stylesheet" href="css/shoppingcart.css">
+	</head>
+	<body onload=''>
+		<header>
+			<!-- 头部登录区 -->
+			<div id='title'>
+				<div class='content'>
+					<span>您好，欢迎来到阿七果园子！</span>
+					<ul class='right mycenter'>
+						<li><a href='user_login.html' title='登录账户'>[登录]</a>&nbsp;</li>
+						<li><a href='user_register.html' title='注册新用户'>[注册有惊喜]</a></li>
+						<li><a href='' title='个人中心'>我的果园</a></li>
+						<li><a href='' title='移动端'>手机果园</a></li>
+						<li>400-720-0770</li>
+					</ul>
+				</div>
+			</div>
+			<div id='searchbardiv'>
+				<div class='content'>
+					<!-- logo图片 -->
+					<h3 class='logo'><a href="index.html" title='阿七果园'></a></h3>
+					<h4 class='logo'><a href="index.html" title='阿七果园'></a></h4>
+					<!-- 配送 -->
+					<div id="delivery">
+						
+					</div>
+					<!-- 搜索框及搜索热点 -->
+					<div id="searchbar">
+						<span>搜索热点:</span>
+						<ul id='hot'>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<div id="searchBtn">搜索</div>
+						<input type="text" id='search'>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</header>
+		
+		<nav>
+			<div class='content'>
+				<ul class="nav">
+					<li id='allproducts' ><a href="products_list.html?classname=all">全部商品</a>
+						<ul class='subnav'>
+							<li><a href="products_list.html?classname=all">所有鲜果</a></li>
+							<li><a href="products_list.html?classname=10">进口鲜果</a></li>
+							<li><a href="products_list.html?classname=20">国产鲜果</a></li>
+							<!-- <li><a href="products_list.html?classname=rest">休闲食品</a></li> -->
+							<li><a href="products_list.html?classname=30">礼盒花篮</a></li>
+							<!-- <li><a href="products_list.html?classname=rest">消费卡券</a></li> -->
+							<li><a href="products_list.html?classname=40">宝贝水果</a></li>
+							<li><a href="products_list.html?classname=59">孕妇水果</a></li>
+							<li><a href="products_list.html?classname=60">老人水果</a></li>
+							<li><a href="products_list.html?classname=70">其他</a></li>
+						</ul>
+					</li>
+					<li><a href="index.html">首页</a></li>
+					<li><a href="products_list.html?classname=10">进口鲜果</a></li>
+					<li><a href="products_list.html?classname=20">国产鲜果</a></li>
+					<li><a href="">在线充值</a></li>
+					<li><a href="">团购配送</a></li>
+					<li><a href="">其他</a></li>
+				</ul>
+				<div id='shopcar'>
+					<a href=""><i></i>购物车</a>
+					<div class="shopcarlist">
+						<h5><span>购物车</span><a class="clearshopcar" href="">清空</a></h5>
+						<div>
+							<span class="pic header">图片</span>
+							<span class="title header">产品</span>
+							<span class="quantity header">数量</span>
+							<span class="unitprice header">单价</span>
+							<span class="totalprice header">小计</span>
+							<span class="delete header">操作</span>
+						</div>
+						<ul>
+							<li>
+								<div class="pic"><img src="image/fruit/fruit_19.jpg" alt="" ></div>
+								<span class="title">进口苹果</span>
+								<div class="quantity">
+									<input type="text" class="shopcarbuyQTY" value="1">
+									<div class="shopcarbuyQTYcontrol">
+										<a href="" class="shopcarAdd">+</a>
+										<a href="" class="shopcarreduce">-</a>
+									</div>
+								</div>
+								<span class="unitprice">200</span>
+								<span class="totalprice">200</span>
+								<a href="#" class="delete">删除</a>
+							</li>
+						</ul>
+						<div class="check">
+							<div  class="sumprice">总计:<span>200</span></div>
+							<a href="" class="checkbtn">去结算</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<section>
+			<div class="content">
+				<div class="shoppingcontent">
+					<h4>购物车</h4>
+					<div class="cartheader">
+						<span class="selecttitle"><input type="checkbox" id="selectall"><label for="selectall">全选</label></span>
+						<span class="productnametitle">商品</span>
+						<span class="quantitytitle">数量</span>
+						<span class="subtotaltitle">金额小计</span>
+						<span class="operationtitle">操作</span>
+					</div>
+					<div class="buylist">
+						<ul>
+							<li>
+								<div class="select"><input type="checkbox"  ></div>
+								<div class="productpic"><img src="image/fruit/fruit_03.jpg" alt=""></div>
+								<div class="productname">进口车厘子</div>
+								<div class="quantity">
+									<input type="text" value="1">
+									<div class="quantitycontrol">
+										<a href="" class="addbtn">+</a>
+										<a href="" class="reducebtn">-</a>
+									</div>
+								</div>
+								<div class="subtotal">290</div>
+								<div class="operation"><a href="">删除</a></div>
+							</li>
+							<li>
+								<div class="select"><input type="checkbox"  ></div>
+								<div class="productpic"><img src="image/fruit/fruit_03.jpg" alt=""></div>
+								<div class="productname">进口车厘子</div>
+								<div class="quantity">
+									<input type="text" value="1">
+									<div class="quantitycontrol">
+										<a href="" class="addbtn">+</a>
+										<a href="" class="reducebtn">-</a>
+									</div>
+								</div>
+								<div class="subtotal">290</div>
+								<div class="operation"><a href="">删除</a></div>
+							</li>
+						</ul>
+
+					</div>
+					<div class="footer">
+						<div class="select">
+							<input type="checkbox" class="selectall" id="selectall"><label for="selectall">全选</label>
+						</div>
+						<div>
+							<p>已选<span class="sumQuantity">10</span>件商品</p>
+							<p>合计(不含运费):<span class="sumprice">400</span></p>
+							<a href="" class="checkbtn">结算订单</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="content">
+				<div class="ltext">
+					<div>
+						<h3>新手指南</h3>
+						<ul>
+							<li><a href="">购物流程</a></li>
+							<li><a href="">用户注册</a></li>
+							<li><a href="">会员积分</a></li>
+							<li><a href="">联系客服</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3>付款方式</h3>
+						<ul>
+							<li><a href="">货到付款</a></li>
+							<li><a href="">在线支付</a></li>
+							<li><a href="">在线充值</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3>配送服务</h3>
+						<ul>
+							<li><a href="">配送运费</a></li>
+							<li><a href="">配送范围</a></li>
+							<li><a href="">配送时间</a></li>
+							<li><a href="">配送须知</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3>售后服务</h3>
+						<ul>
+							<li><a href="">关于商品的退换</a></li>
+							<li><a href="">关于退换的处理</a></li>
+							<li><a href="">关于退款</a></li>
+							<li><a href="">投诉建议</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3>关于我们</h3>
+						<ul>
+							<li><a href="">关于阿七果园子</a></li>
+							<li><a href="">联系我们</a></li>
+							<li><a href="">业务合作</a></li>
+							<li><a href="">招贤纳士</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="rimg">
+					<img src="../image/1_36.png" alt="">
+					<img src="../image/footercontact_38.png" alt="">
+					<p>客服电话:0571-83539906</p>
+					<p>地址:浙江省杭州市萧山区</p>
+				</div>
+			</div>
+		</footer>
+		<script>
+			var selectAll=document.getElementsByClassName("selecttitle")[0].getElementsByTagName("input")[0];
+			var selectAll2=document.querySelector(".footer>.select>.selectall");
+			selectAll.onclick=function(){
+                var selects=document.querySelectorAll(".buylist>ul>li>.select>input");
+			    for(var i=0;i<selects.length;i++){
+					selects[i].checked=selectAll.checked;
+                    selectAll2.checked=selectAll.checked;
+				}
+			}
+
+            selectAll2.onclick=function(){
+                var selects=document.querySelectorAll(".buylist>ul>li>.select>input");
+                for(var i=0;i<selects.length;i++){
+                    selects[i].checked=selectAll2.checked;
+                    selectAll.checked=selectAll2.checked;
+                }
+            }
+
+            var selects=document.querySelectorAll(".buylist>ul>li>.select>input");
+			for(var i=0;i<selects.length;i++){
+			    selects[i].onclick=function (){
+                    var selectAll=document.getElementsByClassName("selecttitle")[0].getElementsByTagName("input")[0];
+                    var selectAll2=document.querySelector(".footer>.select>.selectall");
+					if(!this.checked) {
+                        selectAll.checked = false;
+                        selectAll2.checked = false;
+                    }else{
+					    var unchecked=document.querySelector(".buylist>ul>li>.select>input:not(:checked)")
+						console.log(unchecked)
+						if(unchecked!=null) {
+                            selectAll.checked = false;
+                            selectAll2.checked = false;
+                        }else{
+					        selectAll.checked=true;
+					        selectAll2.checked=true;
+						}
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
