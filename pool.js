@@ -1,7 +1,7 @@
 const mysql = require('mysql');
 var pool = mysql.createPool({
 	host:'w.rdc.sae.sina.com.cn',
-	port:3306,
+	port:3307,
 	user:'root',
 	password:'',
 	database:'aqiFruit',
