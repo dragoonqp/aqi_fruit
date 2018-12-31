@@ -4,7 +4,7 @@ var pool = mysql.createPool({
 	port:3307,
 	user:'ml11yk110o',
 	password:'01x2j4h0ilih5yjw0w5h1240h3xii5mkmjwk5014',
-	database:'aqiFruit',
+	database:'app_aqfruit',
 	connectionLimit:20,
 	multiplestatements:true
 });
