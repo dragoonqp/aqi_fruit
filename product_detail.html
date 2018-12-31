@@ -7,78 +7,15 @@
 		<link rel="stylesheet" href="css/common.css" type='text/css'>
 		<link rel="stylesheet" href="css/product_detail_body.css" type="text/css">
 		<link rel="stylesheet" href="css/iconcss/iconfont.css">
+		<link rel="stylesheet" href="myPagination/myUI.css">
 	</head>
 	<body onload="initialize()">
-		<header>
-			<!-- 头部登录区 -->
-			<div id='title'>
-				<div class='content'>
-					<span>您好，欢迎来到阿七果园子！</span>
-					<ul class='right mycenter'>
-						<li><a href='user_login.html' title='登录账户'>[登录]</a>&nbsp;</li>
-						<li><a href='user_register.html' title='注册新用户'>[注册有惊喜]</a></li>
-						<li><a href='' title='个人中心'>我的果园</a></li>
-						<li><a href='' title='移动端'>手机果园</a></li>
-						<li>400-720-0770</li>
-					</ul>
-				</div>
-			</div>
-			<div id='searchbardiv'>
-				<div class='content'>
-					<!-- logo图片 -->
-					<h3 class='logo'><a href="index.html" title='阿七果园'></a></h3>
-					<h4 class='logo'><a href="index.html" title='阿七果园'></a></h4>
-					<!-- 配送 -->
-					<div id="delivery">
-						
-					</div>
-					<!-- 搜索框及搜索热点 -->
-					<div id="searchbar">
-						<span>搜索热点:</span>
-						<ul id='hot'>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>
-						<div id="searchBtn">搜索</div>
-						<input type="text" id='search'>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>
+		<header id="mainheader">
 		</header>
-		
-		<nav>
-			<div class='content'>
-				<ul class="nav">
-					<li id='allproducts' ><a href="">全部商品</a>
-						<ul class='subnav'>
-							<li><a href="">所有鲜果</a></li>
-							<li><a href="">进口鲜果</a></li>
-							<li><a href="">国产鲜果</a></li>
-							<li><a href="">休闲食品</a></li>
-							<li><a href="">礼盒花篮</a></li>
-							<li><a href="">消费卡券</a></li>
-							<li><a href="">宝贝水果</a></li>
-							<li><a href="">孕妇水果</a></li>
-							<li><a href="">老人水果</a></li>
-							<li><a href="">其他</a></li>
-						</ul>
-					</li>
-					<li><a href="">首页</a></li>
-					<li><a href="">进口鲜果</a></li>
-					<li><a href="">国产鲜果</a></li>
-					<li><a href="">在线充值</a></li>
-					<li><a href="">团购配送</a></li>
-					<li><a href="">其他</a></li>
-				</ul>
-				<div id='shopcar'><a href=""><i></i> 购物车</a></div>
-			</div>
-			<div class="clearfix"></div>
+
+		<nav id="mainnav">
 		</nav>
+		<div class="backToTop"><i class="iconfont icon-backToTop"></i>回到顶部</div>
 		<section>
 			<div class="content productdetail">
 				<div class="asidelink">
@@ -145,7 +82,20 @@
 						<span  class="fname">name</span><i class="iconfont icon-qrcode-1-copy"></i>
 					</p>
 					<div class="buyarea">
-						<div class="picholder"></div>
+						<div>
+							<div class="picplace">
+								<div class="picholder">
+								</div>
+								<div class="supermask"></div>
+								<div class="viewport"></div>
+							</div>
+							<div class="bigpicholder"></div>
+							<div class="smpic">
+								<a href="javascript:;"><i class="icon iconfont icon-leftbutton"></i></a>
+								<div class="smpicholder"></div>
+								<a href="javascript:;"><i class="icon iconfont icon-rightbutton"></i></a>
+							</div>
+						</div>
 						<div class="price">
 							<h4 class="ftitle"></h4>
 							<p><span class="pricetitle">原价 :</span><del class='oldprice'></del></p>
@@ -167,8 +117,8 @@
 								</div>
 							</div>
 							<div class="buybtn">
-								<a href="" class="addtocar">加入购物车</a>
-								<a href="" class="buynow">立即购买</a>
+								<a href="javascript:;" class="addtocar">加入购物车</a>
+								<a href="javascript:;" class="buynow">立即购买</a>
 							</div>
 							<p class="service"><span class="pricetitle">产品保证:</span></p>
 						</div>
@@ -178,15 +128,15 @@
 						<a href=""> <i class="iconfont icon-fenxiang"></i>分享</a>
 					</p>
 					<div class="changeP">
-						<a href="" class="prevproduct">上一个</a>
-						<a href="" class="nextproduct">下一个</a>
+						<a href="javascript:;" class="prevproduct">上一个</a>
+						<a href="javascript:;" class="nextproduct">下一个</a>
 					</div>
 					<div class="productspec">
 						<a  class="spec active" onclick="activea(this)">产品详情</a>
 						<a  class="comment" onclick="activea(this)">产品评论</a>
 						<a  class="dealcount" onclick="activea(this )">销售记录</a>
 						<div class="specdiv">
-							<div id="spec" class="actived">
+							<div class="spec actived">
 								<table>
 									<tr>
 										<td>水果名称:</td><td class="specname value"></td>
@@ -214,8 +164,85 @@
 									<div class="left"></div>
 									<div class="right"></div>
 								</div>
+								<ul class="commentlist">
+									<li>
+										<div class="cmtmain">
+											<div class="cmtcontent">大家是否会啊沙发</div>
+											<p class="cmtTime">2018-12-29</p>
+										</div>
+										<div class="score">
+											<i class="iconfont icon-star"></i>
+											<i class="iconfont icon-star"></i>
+											<i class="iconfont icon-star"></i>
+											<i class="iconfont icon-star"></i>
+											<i class="iconfont icon-star"></i>
+										</div>
+										<div class="cmtuser">
+											<div class="avatar"></div>
+											<div class="uname">名字</div>
+										</div>
+									</li>
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+								<div class="commentpage">
+									<!--<ul>-->
+										<!--<li>上一页</li>-->
+										<!--<li>1</li>-->
+										<!--<li>下一页</li>-->
+									<!--</ul>-->
+								</div>
+								<div class="submitcomment">
+									<div>
+										<span>验证码:</span>
+										<input type="text">
+										<img src="" alt="">
+									</div>
+										<div class="star">
+										<span>评星:</span>
+										<i class="iconfont icon-star"></i>
+										<i class="iconfont icon-star"></i>
+										<i class="iconfont icon-star"></i>
+										<i class="iconfont icon-star"></i>
+										<i class="iconfont icon-star"></i>
+									</div>
+									<div>
+										<span>评论:</span>
+										<textarea name="" id="" cols="90" rows="4"></textarea>
+									</div>
+									<div></div>
+									<a class="submitbtn">提交评论</a>
+								</div>
 							</div>
-							<div id="dealcount">33</div>
+							<div id="dealcount">
+								<table>
+									<thead>
+										<tr>
+											<th>买家</th>
+											<th>数量</th>
+											<th>成交时间</th>
+										</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>匿名用户</td>
+										<td>3</td>
+										<td>2018-12-01</td>
+									</tr>
+									<tr>
+										<td>匿名用户</td>
+										<td>3</td>
+										<td>2018-12-01</td>
+									</tr>
+									<tr>
+										<td>匿名用户</td>
+										<td>3</td>
+										<td>2018-12-01</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -224,79 +251,118 @@
 			
 		</section>
 
-		<footer>
-			<div class="content">
-				<div class="ltext">
-					<div>
-						<h3>新手指南</h3>
-						<ul>
-							<li>购物流程</li>
-							<li>用户注册</li>
-							<li>会员积分</li>
-							<li>联系客服</li>
-						</ul>
-					</div>
-					<div>
-						<h3>付款方式</h3>
-						<ul>
-							<li>货到付款</li>
-							<li>在线支付</li>
-							<li>在线充值</li>
-						</ul>
-					</div>
-					<div>
-						<h3>配送服务</h3>
-						<ul>
-							<li>配送运费</li>
-							<li>配送范围</li>
-							<li>配送时间</li>
-							<li>配送须知</li>
-						</ul>
-					</div>
-					<div>
-						<h3>售后服务</h3>
-						<ul>
-							<li>关于商品的退换</li>
-							<li>关于退换的处理</li>
-							<li>关于退款</li>
-							<li>投诉建议</li>
-						</ul>
-					</div>
-					<div>
-						<h3>关于我们</h3>
-						<ul>
-							<li>关于阿七果园子</li>
-							<li>联系我们</li>
-							<li>业务合作</li>
-							<li>招贤纳士</li>
-						</ul>
-					</div>
-				</div>
-				<div class="rimg">
-					<img src="../image/1_36.png" alt="">
-					<img src="../image/footercontact_38.png" alt="">
-					<p>客服电话:0571-83539906</p>
-					<p>地址:浙江省杭州市萧山区</p>
-				</div>
-			</div>
+		<footer id="mainfooter">
 		</footer>
+		<script src="js/jquery-1.11.3.js"></script>
 		<script>
-			//定义选项卡切换样式函数。
-			function activea(obj){
-                var aFaEle = document.getElementsByClassName("productspec")[0];
-                var aList = aFaEle.getElementsByTagName("a");
-                for(var i=0;i<aList.length;i++){
-                    aList[i].classList.remove("active");
-                }
-                obj.classList.add("active");
-				var activeClass=obj.getAttribute("class")
-				var actdiv=document.getElementsByClassName("specdiv")[0].getElementsByTagName("div")
-				for(var j=0;j<actdiv.length;j++){
-                    actdiv[j].classList.remove("actived");
-                    if(activeClass.indexOf(actdiv[j].getAttribute("id"))>-1){
-				        actdiv[j].classList.add("actived");
+			$(".submitcomment>.star").on("click","i",function(){
+			    $(this).css("color","orange").prevAll("i").css("color","orange");
+			    $(this).nextAll().css("color","");
+			})
+
+
+			//有bug
+			$(".body>.changeP").on("click","a",function(){
+			    var thisA=$(this)
+                $.ajax({
+					url:"/product/prouductcount",
+					type:"get",
+					dataType:"json",
+					success:function(result){
+
+					    var count=result[0].Pcount;
+                        var fid=parseInt(location.search.split("=")[1]);
+                        if(thisA.html()=="上一个" && fid>1){
+                            location.assign("/product_detail.html?fid="+(fid-1))
+                        }else if(thisA.html()=="下一个" && fid<count){
+                            location.assign("/product_detail.html?fid="+(fid+1))
+                        }
 					}
+				})
+
+			})
+
+
+
+
+            //定义选项卡切换样式函数。
+			var activebtns=$(".productspec").children("a")
+			for(var i=0;i<activebtns.length;i++){
+				(function(i){
+				    activebtns[i].onclick=function(){
+						this.parentElement.getElementsByClassName("active")[0].classList.remove("active");
+						this.classList.add("active");
+						var divs=document.getElementsByClassName("specdiv")[0].children;
+						divs[i].parentElement.getElementsByClassName("actived")[0].classList.remove("actived");
+						divs[i].classList.add("actived");
+					}
+                })(i);
+			}
+
+			//定义选项卡切换样式函数。
+			// function activea(obj){
+             //    var aFaEle = document.getElementsByClassName("productspec")[0];
+             //    var aList = aFaEle.getElementsByTagName("a");
+             //    for(var i=0;i<aList.length;i++){
+             //        aList[i].classList.remove("active");
+             //    }
+             //    obj.classList.add("active");
+			// 	var activeClass=obj.getAttribute("class")
+			// 	var actdiv=document.getElementsByClassName("specdiv")[0].getElementsByTagName("div")
+			// 	for(var j=0;j<actdiv.length;j++){
+             //        actdiv[j].classList.remove("actived");
+             //        if(activeClass.indexOf(actdiv[j].getAttribute("id"))>-1){
+			// 	        actdiv[j].classList.add("actived");
+			// 		}
+			// 	}
+			// }
+
+			var smpicholder=document.getElementsByClassName("smpicholder")[0];
+            smpicholder.onmouseover=function (e){
+                var src=e.target.src;
+                var picholder=document.getElementsByClassName("picholder")[0];
+                var bigpicholder=document.getElementsByClassName("bigpicholder")[0];
+                bigpicholder.children[0].src=src;
+                picholder.children[0].src=src;
+			}
+
+
+			var picplace=document.getElementsByClassName("picplace")[0];
+			var supermask=document.getElementsByClassName("supermask")[0];
+            supermask.onmouseover = function(e){//鼠标移动到box上显示大图片和选框
+                var viewport=document.getElementsByClassName("viewport")[0];
+                viewport.style.display = "block";
+            }
+
+            supermask.onmousemove=function(e){
+                var viewport=document.getElementsByClassName("viewport")[0];
+                var bigpicholder=document.getElementsByClassName("bigpicholder")[0];
+                var bigpic=bigpicholder.getElementsByTagName("img")[0];
+                bigpicholder.style.display="block";
+			    viewport.style.display="block";
+			    viewport.style.top=(e.offsetY-viewport.offsetHeight/2)+"px";
+                viewport.style.left=(e.offsetX-viewport.offsetWidth/2)+"px";
+                if(viewport.style.top<=0+"px"){
+                    viewport.style.top=0+"px";
+                }
+                else if((e.offsetY-viewport.offsetHeight/2)>(supermask.offsetHeight-viewport.offsetHeight)){
+                    viewport.style.top=(supermask.offsetHeight-viewport.offsetHeight)+"px";
 				}
+                if(viewport.style.left<=0+"px"){
+                    viewport.style.left=0+"px";
+                }
+                else if((e.offsetX-viewport.offsetWidth/2)>=(supermask.offsetWidth-viewport.offsetWidth)){
+                    viewport.style.left=(supermask.offsetWidth-viewport.offsetWidth)+"px";
+				}
+				bigpic.style.top=-bigpicholder.offsetHeight/viewport.offsetHeight*parseFloat(viewport.style.top)+"px";
+                bigpic.style.left=-bigpicholder.offsetWidth/viewport.offsetWidth*parseFloat(viewport.style.left)+"px";
+
+			}
+            supermask.onmouseout=function(e){
+                var viewport=document.getElementsByClassName("viewport")[0];
+                var bigpicholder=document.getElementsByClassName("bigpicholder")[0];
+                bigpicholder.style.display="none";
+                viewport.style.display="none";
 			}
 
 			function getdetail(){
@@ -307,22 +373,55 @@
                     xhr.onreadystatechange=function(){
                         if(xhr.readyState==4& xhr.status==200){
                             var result=JSON.parse(xhr.responseText);
-                            //console.log(result);
                             //产品购买区
                             var fname=document.getElementsByClassName("fname")[0];
                             var ftitle=document.getElementsByClassName("ftitle")[0];
                             var picholder=document.getElementsByClassName("picholder")[0];
+                            var bigpicholder=document.getElementsByClassName("bigpicholder")[0];
                             var oldprice=document.getElementsByClassName("oldprice")[0];
                             var newprice=document.getElementsByClassName("newprice")[0];
                             var packweight=document.getElementsByClassName("packweight")[0];
                             var bonuspoints=document.getElementsByClassName("bonuspoints")[0];
+                            var smpicholder=document.getElementsByClassName("smpicholder")[0];
 
                             fname.innerHTML=result[0].pName;
                             ftitle.innerHTML=result[0].title+'<br>'+result[0].fdesc;
-                            picholder.innerHTML='<img src="'+result[0].spic+'">';
+                            picholder.innerHTML='<img src="'+result[1].spic+'">';
+                            bigpicholder.innerHTML='<img src="'+result[1].spic+'">';
                             oldprice.innerHTML='￥'+result[0].oUnitPrice.toFixed(2)+'/箱';
                             newprice.innerHTML='￥'+result[0].nUnitPrice.toFixed(2)+'/箱';
                             packweight.innerHTML=result[0].packWeight+'斤/箱';
+                            var li="";
+							for(var i=1;i<result.length;i++){
+                                li+='<li><img src="'+result[i].spic+'"</li>';
+							}
+                            smpicholder.innerHTML="<ul>"+li+"</ul>";
+
+							//小图片移动
+                            var moved=0;
+                            if($(".smpicholder>ul>li").length<=4){
+                                $(".buyarea .smpic>a:first").addClass("disable");
+                            }
+                            $(".buyarea .smpic>a:last").addClass("disable");
+                            $(".buyarea .smpic>a:first").click(function(){
+                                moved++
+                                $(".smpicholder>ul").css("margin-left",-70*moved);
+                                $(".buyarea .smpic>a:last").removeClass("disable");
+                                console.log($(".smpicholder>ul").css("margin-left"))
+                                if($(".smpicholder>ul").css("margin-left")==0+"px"){
+                                    $(".buyarea .smpic>a:first").addClass("disable");
+                                }
+                            })
+                            $(".buyarea .smpic>a:last").click(function(){
+                                moved--
+                                $(".smpicholder>ul").css("margin-left",-70*moved);
+                                $(".buyarea .smpic>a:first").removeClass("disable");
+
+                                if($(".smpicholder>ul").css("margin-left")==-70*($(".smpicholder>ul>li").length-4)+"px"){
+                                    $(".buyarea .smpic>a:last").addClass("disable");
+                                }
+                            })
+
 
 							//产品详情区
                             var specname=document.getElementsByClassName("specname")[0];
@@ -365,5 +464,10 @@
 				reduceBtn.classList.add("disable");
 			}
 		</script>
+		<script src="js/header.js"></script>
+		<script src="js/nav.js"></script>
+		<script src="js/footer.js"></script>
+		<script src="myPagination/myPagination.js"></script>
+		<script src="js/productDetail.js"></script>
 	</body>
 </html>

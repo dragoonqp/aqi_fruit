@@ -4,13 +4,15 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title></title>
-		<link rel="stylesheet" href="css/common.css" type='text/css'>
+		<!--<link rel="stylesheet" href="css/common.css" type='text/css'>-->
+		<link rel="stylesheet" type="text/css" href="css/iconcss/iconfont.css">
 		<link rel="stylesheet" href="css/main.css" type='text/css'>
+
 	</head>
-	<body onload='getlist()'>
-		<header>
+	<body onload='getlist()' onscroll="scroll()" >
+		<header id="mainheader">
 			<!-- 头部登录区 -->
-			<div id='title'>
+			<div class='title'>
 				<div class='content'>
 					<span>您好，欢迎来到阿七果园子！</span>
 					<ul class='right mycenter'>
@@ -49,8 +51,7 @@
 				</div>
 			</div>
 		</header>
-		
-		<nav>
+		<nav id="mainnav">
 			<div class='content'>
 				<ul class="nav">
 					<li id='allproducts' ><a href="products_list.html?classname=all">全部商品</a>
@@ -75,7 +76,7 @@
 					<li><a href="">其他</a></li>
 				</ul>
 				<div class='shopcar'>
-					<a href=""><i></i>购物车</a>
+					<a href=""><i class="iconfont icon-shoppingcart"></i>购物车</a>
 					<div class="shopcarlist">
 						<h5><span>购物车</span><a class="clearshopcar" href="">清空</a></h5>
 						<div class="headertitle">
@@ -131,27 +132,34 @@
 							</li>
 						</ul>
 						<div class="check">
-							<div  class="sumprice">总计:<span>600</span></div>
+							<div  class="sumprice">总计:<span></span></div>
 							<a href="" class="checkbtn">去结算</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</nav>
+		<div class="backToTop"><i class="iconfont icon-backToTop"></i>回到顶部</div>
 		<section>
 			<!-- <div class='content'>
-				
 			</div> -->
-
-			<div id='banner'>
-				<ul id='carousel'>
-					<li>
-						<div id='d1'></div>
-					</li>
-					<li>
-						<div id='d2'></div>
-					</li>
-				</ul>
+			<div class='banner'>
+				<div class="content">
+					<ul class='carousel'>
+						<li class="show">
+							<a href="javascript:;"><img src="image/carousel1.jpg" alt=""></a>
+						</li>
+						<li>
+							<a href="javascript:;"><img src="image/carousel2.jpg" alt=""></a>
+						</li>
+						<li>
+							<a href="javascript:;"><img src="image/carousel3.jpg" alt=""></a>
+						</li>
+						<li>
+							<a href="javascript:;"><img src="image/carousel4.jpg" alt=""></a>
+						</li>
+					</ul>
+				</div>
 			</div>
 			<div class="pEx">
 				<div class="content">
@@ -300,156 +308,13 @@
 				</ul>
 			</div>	
 		</section>
-		<footer>
-			<div class="content">
-				<div class="ltext">
-					<div>
-						<h3>新手指南</h3>
-						<ul>
-							<li><a href="">购物流程</a></li>
-							<li><a href="">用户注册</a></li>
-							<li><a href="">会员积分</a></li>
-							<li><a href="">联系客服</a></li>
-						</ul>
-					</div>
-					<div>
-						<h3>付款方式</h3>
-						<ul>
-							<li><a href="">货到付款</a></li>
-							<li><a href="">在线支付</a></li>
-							<li><a href="">在线充值</a></li>
-						</ul>
-					</div>
-					<div>
-						<h3>配送服务</h3>
-						<ul>
-							<li><a href="">配送运费</a></li>
-							<li><a href="">配送范围</a></li>
-							<li><a href="">配送时间</a></li>
-							<li><a href="">配送须知</a></li>
-						</ul>
-					</div>
-					<div>
-						<h3>售后服务</h3>
-						<ul>
-							<li><a href="">关于商品的退换</a></li>
-							<li><a href="">关于退换的处理</a></li>
-							<li><a href="">关于退款</a></li>
-							<li><a href="">投诉建议</a></li>
-						</ul>
-					</div>
-					<div>
-						<h3>关于我们</h3>
-						<ul>
-							<li><a href="">关于阿七果园子</a></li>
-							<li><a href="">联系我们</a></li>
-							<li><a href="">业务合作</a></li>
-							<li><a href="">招贤纳士</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="rimg">
-					<img src="../image/1_36.png" alt="">
-					<img src="../image/footercontact_38.png" alt="">
-					<p>客服电话:0571-83539906</p>
-					<p>地址:浙江省杭州市萧山区</p>
-				</div>
-			</div>
+		<footer id="mainfooter">
 		</footer>
-		<script>
-
-			//购物车
-			var shopcarlist= document.getElementsByClassName("shopcarlist")[0];
-			var QTYcontrolbtns = shopcarlist.getElementsByClassName("QTYcontrol")
-			for(var btn of QTYcontrolbtns){
-			    btn.onclick = function(){
-			        var shopcarbuyQTY = this.parentElement.previousElementSibling;
-			        if(this.innerHTML=="+"){
-			            shopcarbuyQTY.value++;
-					}else if(shopcarbuyQTY.value>1){
-                        shopcarbuyQTY.value--;
-					}
-					var thisli=this.parentElement.parentElement.parentElement;
-					var totalprice=thisli.getElementsByClassName("totalprice")[0];
-                    totalprice.innerHTML=parseFloat(thisli.getElementsByClassName("unitprice")[0].innerHTML*shopcarbuyQTY.value).toFixed(2);
-                    var sumprice=shopcarlist.getElementsByClassName("sumprice")[0].getElementsByTagName("span")[0];
-                    var totalprices=document.querySelectorAll(".shopcarlist>ul>li .totalprice");
-                    var sumpriceFloat=0;
-                    for(var i=0;i<totalprices.length;i++){
-                        sumpriceFloat=sumpriceFloat+parseFloat(totalprices[i].innerHTML);
-					}
-					sumprice.innerHTML=sumpriceFloat.toFixed(2);
-				}
-			}
-
-
-
-			function getlist(){
-				function normallist(){
-					var xhr = new XMLHttpRequest();
-					xhr.onreadystatechange=function (){
-						if(xhr.readyState==4 && xhr.status==200){
-							//console.log(1111);
-							var result=JSON.parse(xhr.responseText);
-							//console.log(result);
-							var listr='';
-							for(var i=0;i<result.length;i++){
-								listr+='<li><div class="clock"><p>限时抢购</p><img src="image/clock.png"></div><a href="product_detail.html?fid='+result[i].fId+'"><img class="npimg" src="'+result[i].spic+'"></a><p class="title">'+result[i].title+'</p><p class="fdesc">'+result[i].fdesc+'</p><p class="timer">'+'02小时35分26秒'+'</p><p class="price"><span class="nPrice">￥'+result[i].nUnitPrice.toFixed(2)+'</span><span class="packWeight">'+result[i].packWeight+'斤</span><span class="oPrice">原价:'+result[i].oUnitPrice+'</span></p><p class="dealCount">300人已购买</p><div class="buyBtn"><a href="product_detail.html?fid='+result[i].fId+'">立即抢购</a></div></li>'
-							}
-							var ul=document.createElement('ul');
-							ul.innerHTML=listr;
-							var normalp = document.getElementsByClassName("normalp")[0];
-							normalp.appendChild(ul);
-							
-						}
-					}
-					xhr.open('get','/product/normallist',true);
-					xhr.send(null);
-				}
-
-				function Onsalelist(){
-					var xhr = new XMLHttpRequest();
-					xhr.onreadystatechange=function (){
-						if(xhr.readyState==4 && xhr.status==200){
-							var result=JSON.parse(xhr.responseText);
-							var listr1='';
-							for(var i=0;i<result.length/2;i++){
-								listr1+='<li><a href="product_detail.html?fid='+result[i].fId+'"><img src="'+result[i].spic+'"></a><p class="name">'+result[i].pName+'</p><p class="price"><span class="nPrice">￥'+result[i].nUnitPrice.toFixed(2)+'</span><span class="packWeight">'+result[i].packWeight+'斤</span></p><div><p class="oPrice">原价 : '+result[i].oUnitPrice+'</p><a href="product_detail.html?fid='+result[i].fId+'" class="Onsalebuybtn">立即购买</a></div></li>'
-							}
-							var ul1=document.createElement('ul');
-							var Onsalep=document.getElementsByClassName("Onsalep")[0];
-							ul1.innerHTML=listr1;
-							Onsalep.appendChild(ul1);
-							var listr2=''
-							for(var i=result.length/2;i<result.length;i++){
-								listr2+='<li><a href="product_detail.html?fid='+result[i].fId+'"><img src="'+result[i].spic+'"></a><p class="name">'+result[i].pName+'</p><p class="price"><span class="nPrice">￥'+result[i].nUnitPrice.toFixed(2)+'</span><span class="packWeight">'+result[i].packWeight+'斤</span></p><div><span class="oPrice">原价:'+result[i].oUnitPrice+'</span><a href="product_detail.html?fid='+result[i].fId+'" class="Onsalebuybtn">立即购买</a></div></li>'
-							}
-							var ul2=document.createElement('ul');
-							ul2.innerHTML=listr2;
-							Onsalep.appendChild(ul2);
-							
-						}
-					}
-					xhr.open('get','/product/Onsalelist',true);
-					xhr.send(null);
-				}
-
-				function giftBasketlist(){
-					var xhr = new XMLHttpRequest();
-					xhr.onreadystatechange=function (){
-						if(xhr.readyState==4 && xhr.status==200){
-							var result=xhr.responseText;
-							console.log(result);
-						}
-					}
-					xhr.open('get','/product/giftBasketlist',true);
-					xhr.send(null);
-				}
-				normallist();
-				Onsalelist();
-				giftBasketlist();
-			}
-
-		</script>
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/header.js"></script>
+		<script src="js/footer.js"></script>
+		<script src="js/nav.js"></script>
+		<script src="js/index.js"></script>
+		<!--<script src="js/addtoshoppingcart.js" type="text/javascript"></script>-->
 	</body>
 </html>
